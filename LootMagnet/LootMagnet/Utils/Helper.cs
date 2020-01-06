@@ -184,6 +184,8 @@ namespace LootMagnet {
                 Mod.Log.Info($"   Component:{compSDef.Description.Id}::{compSDef.Description.Name}");
                 if (compSDef.Description.Cost > adjValueCap) {
                     Mod.Log.Info($"   cost:{compSDef.Description.Cost} greater than cap, skipping.");
+                } else if (Mod.Config.OfferBlacklist.Contains(compSDef.Description.Id)) {
+                    Mod.Log.Info($"   item blacklisted from offer, skipping.");
                 } else if (compSDef.Description.Cost > compensation) {
                     Mod.Log.Info($"   remaining compensation:{compensation} less than cost:{compSDef.Description.Cost}, skipping.");
                 } else {

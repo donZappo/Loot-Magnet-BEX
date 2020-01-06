@@ -58,6 +58,8 @@ namespace LootMagnet {
 
         public List<string> RollupBlacklist = new List<string>();
 
+        public List<string> OfferBlacklist = new List<string>();
+
         public List<RepCfg> Reputation = new List<RepCfg>() {};
 
         public HoldbackCfg Holdback = new HoldbackCfg();
